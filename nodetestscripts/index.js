@@ -7,7 +7,7 @@ const handler = async (event) => {
             event = JSON.parse(event);
         }
 
-        console.log("Event received:", JSON.stringify(event));
+        console.log("Event :", JSON.stringify(event));
 
         const { operation, num1, num2 } = event;
 
