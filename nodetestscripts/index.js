@@ -24,12 +24,12 @@ const handler = async (event) => {
             case "subtract":
                 result = num1 - num2;
                 break;
-            case "multiply":
-                result = num1 * num2;
-                break;
-            case "divide":
-                result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
-                break;
+            // case "multiply":
+            //     result = num1 * num2;
+            //     break;
+            // case "divide":
+            //     result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+            //     break;
             default:
                 throw new Error("Invalid operation");
         }
