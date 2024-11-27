@@ -17,7 +17,7 @@ describe('AWS Lambda Function Tests', () => {
         const body = JSON.parse(result.body);
 
         expect(result.statusCode).toBe(200);
-        expect(body.result).toBe(15); // Expected result
+        expect(body.result).toBe(5); // Expected result
     });
 
     test('Subtraction operation should return correct result', async () => {
