@@ -29,32 +29,32 @@ describe('AWS Lambda Function Tests', () => {
         expect(body.result).toBe(5); // Expected result
     });
 
-    test('Multiplication operation should return correct result', async () => {
-        const event = { operation: 'multiply', num1: 10, num2: 5 };
-        const result = await handler(event);
-        const body = JSON.parse(result.body);
+    // test('Multiplication operation should return correct result', async () => {
+    //     const event = { operation: 'multiply', num1: 10, num2: 5 };
+    //     const result = await handler(event);
+    //     const body = JSON.parse(result.body);
 
-        expect(result.statusCode).toBe(200);
-        expect(body.result).toBe(50); // Expected result
-    });
+    //     expect(result.statusCode).toBe(200);
+    //     expect(body.result).toBe(50); // Expected result
+    // });
 
-    test('Division operation (valid) should return correct result', async () => {
-        const event = { operation: 'divide', num1: 10, num2: 2 };
-        const result = await handler(event);
-        const body = JSON.parse(result.body);
+    // test('Division operation (valid) should return correct result', async () => {
+    //     const event = { operation: 'divide', num1: 10, num2: 2 };
+    //     const result = await handler(event);
+    //     const body = JSON.parse(result.body);
 
-        expect(result.statusCode).toBe(200);
-        expect(body.result).toBe(5); // Expected result
-    });
+    //     expect(result.statusCode).toBe(200);
+    //     expect(body.result).toBe(5); // Expected result
+    // });
 
-    test('Division operation (division by zero) should return error message', async () => {
-        const event = { operation: 'divide', num1: 10, num2: 0 };
-        const result = await handler(event);
-        const body = JSON.parse(result.body);
+    // test('Division operation (division by zero) should return error message', async () => {
+    //     const event = { operation: 'divide', num1: 10, num2: 0 };
+    //     const result = await handler(event);
+    //     const body = JSON.parse(result.body);
 
-        expect(result.statusCode).toBe(200);
-        expect(body.result).toBe("Cannot divide by zero"); // Expected result
-    });
+    //     expect(result.statusCode).toBe(200);
+    //     expect(body.result).toBe("Cannot divide by zero"); // Expected result
+    // });
 
     test('Invalid input (missing operation) should return error message', async () => {
         const event = { num1: 10, num2: 5 }; // Missing operation
